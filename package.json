@@ -1,0 +1,24 @@
+{
+  "name": "cookie-browser",
+  "version": "1.0.0",
+  "description": "The module allows you yo conveniently handle cookie in your browser.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saurus42/cookie.git"
+  },
+  "keywords": [
+    "cookie",
+    "browser",
+    "cookie-browser"
+  ],
+  "author": "Mateusz Krasuski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saurus42/cookie/issues"
+  },
+  "homepage": "https://github.com/Saurus42/cookie#readme"
+}
