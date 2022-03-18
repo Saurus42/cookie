@@ -1,8 +1,8 @@
 {
   "name": "cookie-browser",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "The module allows you yo conveniently handle cookie in your browser.",
-  "main": "index.js",
+  "main": "./common/script/index.js",
   "scripts": {
     "test": "jest"
   },

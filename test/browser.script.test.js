@@ -1,4 +1,4 @@
-import Cookie from '../index.js';
+/// <reference path="../browser/script/index.d.ts" />
 
 const cookie = new Cookie();
 
@@ -11,7 +11,6 @@ let date = new Date( 2022, 3, 16, 0, 0, 0, 0 );
 
 cookie.push( 'test1', 'test-value1', undefined, undefined, undefined, date );
 
-console.log( 'Is cookie?' );
 console.log( cookie.has( 'test1' ) );
 console.log( document.cookie );
 
@@ -22,7 +21,6 @@ date = new Date( 2022, 3, 17, 0, 0, 0, 0 );
 
 cookie.push( 'test2', 'test-value2', undefined, undefined, undefined, date );
 
-console.log( 'Is cookie?' );
 console.log( cookie.has( 'test2' ) );
 console.log( document.cookie );
 
@@ -31,7 +29,6 @@ console.log( cookie.length );
 
 cookie.delete( 'test1', 'test-value2' );
 
-console.log( 'Is cookie?' );
 console.log( cookie.has( 'test1' ) );
 console.log( document.cookie );
 

@@ -42,4 +42,4 @@ declare class Cookie {
   has( name: string ): boolean
 }
 
-export default Cookie;
+export = Cookie;
