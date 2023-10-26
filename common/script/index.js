@@ -36,7 +36,7 @@ class Cookie {
   constructor() {
     this._month = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ];
     this._day = [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ];
-    this._url = document.domain;
+    this._url = location.hostname;
     this._cookies = new Map();
     const cookies = document.cookie.split( '; ' );
     for( const cookie of cookies ) {

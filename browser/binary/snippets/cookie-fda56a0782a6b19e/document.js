@@ -3,7 +3,7 @@ export function getCookie() {
 }
 
 export function getDomain() {
-  return document.domain;
+  return location.hostname;
 }
 
 export function addRemoveCookie( cookie ) {
