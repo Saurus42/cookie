@@ -19,10 +19,6 @@ impl Cookie {
     #[wasm_bindgen( constructor )]
     pub fn new() -> Self {
         let document_html = window().unwrap().document().unwrap().dyn_into::<HtmlDocument>().unwrap();
-        // let window = window().expect( "Error window" );
-        // let document = window.document().expect( "Error document" );
-        // let document_html = document.clone().dyn_into::<HtmlDocument>().expect( "Error html document" );
-        // let location = document.location().expect( "Error Location" );
         let location = document_html.location().expect( "Error Location" );
         let cook = document_html.cookie().unwrap();
         let cookies_string = cook.split( "; " ).collect::<Vec<&str>>();

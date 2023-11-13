@@ -1,4 +1,4 @@
-import init, { Cookie } from '../pkg/cookie.js';
+import init, { Cookie } from '../browser/cookie.js';
 
 init().then( () => {
   const cookie = new Cookie();
