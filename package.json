@@ -2,7 +2,7 @@
   "name": "cookie-browser",
   "version": "2.0.0",
   "description": "The module allows you yo conveniently handle cookie in your browser.",
-  "main": "./common/script/index.js",
+  "main": "./browser/cookie.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Saurus42/cookie.git"
