@@ -1,9 +1,7 @@
-mod utils;
-
 use std::collections::HashMap;
 use js_sys::{Array, Date, JsString, Boolean};
 use wasm_bindgen::prelude::*;
-use web_sys::{ window, HtmlDocument };
+use web_sys::{window, HtmlDocument};
 
 #[wasm_bindgen]
 pub struct Cookie {
@@ -43,10 +41,10 @@ impl Cookie {
         self.cookies.len()
     }
 
-    #[wasm_bindgen( setter )]
-    pub fn set_length( &self, _val: u32 ) {
-        utils::set_panic_hook();
-    }
+    // #[wasm_bindgen( setter )]
+    // pub fn set_length( &self, _val: u32 ) {
+    //     utils::set_panic_hook();
+    // }
 
     #[wasm_bindgen( getter )]
     pub fn cookies( &self ) -> Array {
@@ -60,10 +58,10 @@ impl Cookie {
         cookies
     }
 
-    #[wasm_bindgen( setter )]
-    pub fn set_cookies( &self, _val: Array ) {
-        utils::set_panic_hook();
-    }
+    // #[wasm_bindgen( setter )]
+    // pub fn set_cookies( &self, _val: Array ) {
+    //     utils::set_panic_hook();
+    // }
 
     fn u32_to_string( &self, number: u32 ) -> String {
         let mut _data = String::new();
