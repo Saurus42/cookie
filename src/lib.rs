@@ -72,9 +72,11 @@ impl Cookie {
                 59 => {
                     for_key = true;
                     cookies.insert(
-                        String::from_utf8(key.as_slice().to_vec()).unwrap_or(String::new()),
-                        String::from_utf8(value.as_slice().to_vec()).unwrap_or(String::new())
+                        String::from_utf8(key.clone()).unwrap_or(String::new()),
+                        String::from_utf8(value.clone()).unwrap_or(String::new())
                     );
+                    key.clear();
+                    value.clear();
                     continue;
                 },
                 61 => {
@@ -89,6 +91,12 @@ impl Cookie {
                     }
                 }
             };
+        }
+        if !key.is_empty() && !value.is_empty() {
+            cookies.insert(
+                String::from_utf8(key).unwrap_or(String::new()),
+                String::from_utf8(value).unwrap_or(String::new())
+            );
         }
         cookies
     }

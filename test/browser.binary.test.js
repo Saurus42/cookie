@@ -13,7 +13,7 @@ init().then( () => {
   let date = new Date( currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), currentDate.getHours(), currentDate.getMinutes() + 1, 0, 0 );
 
   cookie.push( 'test1', 'test-value1', undefined, undefined, undefined, date );
-
+  cookie.refresh();
   console.log( cookie.has( 'test1' ) );
   console.log( document.cookie );
 
@@ -23,7 +23,7 @@ init().then( () => {
   date = new Date( currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), currentDate.getHours(), currentDate.getMinutes() + 1, 0, 0 );
 
   cookie.push( 'test2', 'test-value2', undefined, undefined, undefined, date );
-
+  cookie.refresh();
   console.log( cookie.has( 'test2' ) );
   console.log( document.cookie );
 
