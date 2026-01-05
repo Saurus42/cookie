@@ -142,7 +142,7 @@ impl Cookie {
         expires: Option<Date>,
         sanesite: Option<String>
     ) {
-        let Some(document) = self.document.clone() else { return };
+        let Some(ref document) = self.document else { return };
         let mut m = String::new();
         if let Some( max_age ) = max_age {
             m = format!("; max-age={}", max_age);
@@ -182,7 +182,7 @@ impl Cookie {
         path: Option<String>,
         domain: Option<String> )
     {
-        let Some(document) = self.document.clone() else { return };
+        let Some(ref document) = self.document else { return };
         let result = document.set_cookie( format!(
             "{}={}; path={}; domain={}; expires=Thu, 01 Jan 1970 00:00:00 UTC",
             name,
