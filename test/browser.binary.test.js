@@ -5,10 +5,10 @@ init().then( () => {
 
   const currentDate = new Date();
 
-  console.log( cookie.cookies );
+  console.log( cookie.get_cookies() );
 
   console.log( 'The number of cookies in the collection.' );
-  console.log( cookie.length );
+  console.log( cookie.get_length() );
 
   let date = new Date( currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), currentDate.getHours(), currentDate.getMinutes() + 1, 0, 0 );
 
@@ -18,7 +18,7 @@ init().then( () => {
   console.log( document.cookie );
 
   console.log( 'The number of cookies in the collection.' );
-  console.log( cookie.length );
+  console.log( cookie.get_length() );
 
   date = new Date( currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), currentDate.getHours(), currentDate.getMinutes() + 1, 0, 0 );
 
@@ -28,7 +28,7 @@ init().then( () => {
   console.log( document.cookie );
 
   console.log( 'The number of cookies in the collection.' );
-  console.log( cookie.length );
+  console.log( cookie.get_length() );
 
   cookie.delete( 'test1', 'test-value2' );
 
@@ -36,5 +36,5 @@ init().then( () => {
   console.log( document.cookie );
 
   console.log( 'The number of cookies in the collection.' );
-  console.log( cookie.length );
+  console.log( cookie.get_length() );
 } );
